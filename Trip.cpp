@@ -1,6 +1,29 @@
 #include "Trip.h"
 
-Trip(RouteStrategy* strategy);
-~Trip();
-void planRoute(MapComponent* start, MapComponent* destination);
-void setStrategy(RouteStrategy* strategy);
+Trip::Trip(RouteStrategy* strategy)
+{
+    if (strategy != nullptr) {
+        this->strategy = strategy;
+    }
+}
+
+Trip::~Trip()
+{
+    delete strategy;
+}
+
+void Trip::planRoute(MapComponent* start, MapComponent* destination) {
+    if (strategy != nullptr)
+    {
+        strategy->planRoute(start, destination);
+    }
+}
+
+void Trip::setStrategy(RouteStrategy* strategy)
+{
+    if (this->strategy != strategy)
+    {
+        delete this->strategy;
+        this->strategy = strategy;
+    }
+}
