@@ -11,7 +11,7 @@ Region::~Region() {
     children.clear();
 }
 
-void Region:display(){
+void Region::display(){
     std::cout << " REGION: " << name << " (Children: " << children.size() << ")\n";
 
     for (MapComponent* child : children) {

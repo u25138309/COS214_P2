@@ -8,7 +8,7 @@ class VolcanoObstacle : public AbstractObstacle{
 private:
     double blastRadius;
 public:
-    VolcanicObstacle(const std::string& name, int dmg, double radius);
+    VolcanoObstacle(const std::string& name, int dmg, double radius);
     void triggerHazard();
 };
 

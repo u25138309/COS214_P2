@@ -29,7 +29,7 @@ public:
     void setTerrain(AbstractTerrain* terrain);
     void setNPC(AbstractNPC* npc);
     void setObstacle(AbstractObstacle* obstacle);
-    void populateLocation(WorldFactory* factory);
+    void populateRegion(WorldFactory* factory);
 };
 
 #endif

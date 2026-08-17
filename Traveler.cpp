@@ -1,4 +1,5 @@
 #include "Traveler.h"
+#include "TravelMode.h"
 
 Traveler::Traveler(TravelMode* travelMode, MapComponent* mapComponent) {
     this->travelMode = travelMode;
@@ -12,23 +13,15 @@ Traveler::~Traveler() {
     delete this->travelMode;
 }
 
-void Traveler::move()
-{
-    TravelMode* oldMode = travelMode;
-
-    if (travelMode != nullptr)
-    {
+void Traveler::move() {
+    if (travelMode != nullptr) {
         travelMode->move(this);
-    }
-
-    if (oldMode != travelMode)
-    {
-        delete oldMode;
     }
 }
 
 void Traveler::setMode(TravelMode* travelMode) {
     if (travelMode != nullptr && this->travelMode != travelMode) {
+        delete this->travelMode;
         this->travelMode = travelMode;
     }
 }

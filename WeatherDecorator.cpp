@@ -1,6 +1,6 @@
 #include "WeatherDecorator.h"
 
-WeatherDecorator::WeatherDecorator(MapComponent* comp, const std::string& condition, double extra)
+WeatherDecorator::WeatherDecorator(MapComponent* comp, const std::string& condition, int extra)
     : Decorator(comp), weatherCondition(condition), extraCost(extra) {}
 
 int WeatherDecorator::getTravelCost() {

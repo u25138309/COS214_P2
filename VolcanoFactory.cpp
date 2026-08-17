@@ -12,5 +12,5 @@ AbstractTerrain* VolcanoFactory::createTerrain() {
 }
 
 AbstractObstacle* VolcanoFactory::createObstacle() {
-    return new VolcanicObstacle("Eruption Blast", 50, 15.0);
+    return new VolcanoObstacle("Eruption Blast", 50, 15.0);
 }

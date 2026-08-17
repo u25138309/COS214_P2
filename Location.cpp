@@ -68,7 +68,7 @@ void Location::setObstacle(AbstractObstacle* obstacle) {
     this->obstacle = obstacle;
 }
 
-void Location::populateLocation(WorldFactory* factory){
+void Location::populateRegion(WorldFactory* factory){
     if(factory){
         delete terrain;
         delete npc;

@@ -2,7 +2,8 @@
 #define TRAVELLER_H
 
 #include "MapComponent.h"
-#include "TravelMode.h"
+
+class TravelMode;
 
 class Traveler {
     private:

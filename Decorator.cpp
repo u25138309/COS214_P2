@@ -24,3 +24,9 @@ MapComponent* Decorator::getChild(int index) {
     }
     return nullptr;
 }
+
+void Decorator::populateRegion(WorldFactory* factory) {
+    if (component) {
+        component->populateRegion(factory);
+    }
+}
